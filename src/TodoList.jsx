@@ -29,9 +29,9 @@ function TodoList() {
   function moveTaskDown(index) {}
 
   return (
-    <div className="min">
+    <div className="bg-blue-300 max-w-4xl m-auto">
       <h1 className="text-center text-3xl">Todo List</h1>
-      <div className="mx-auto">
+      <div className="">
         <input
           className="p-2 border rounded-md w-1/2"
           type="text"
