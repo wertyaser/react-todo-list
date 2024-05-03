@@ -49,26 +49,26 @@ function TodoList() {
 
       <ol>
         {tasks.map((task, index) => (
-          <li key={index} className="flex justify-between">
+          <li key={index} className="flex justify-between p-2">
             {task}
             <div>
-              <button
-                onClick={() => moveTaskUp(index)}
-                className="px-4 py-2 border bg-yellow-500 text-white rounded-md"
-              >
-                Up
-              </button>
-              <button
-                onClick={() => moveTaskDown(index)}
-                className="px-4 py-2 border bg-green-500 text-white rounded-md"
-              >
-                Down
-              </button>
               <button
                 onClick={() => deleteTask(index)}
                 className="px-4 py-2 border bg-red-500 text-white rounded-md"
               >
                 Delete
+              </button>
+              <button
+                onClick={() => moveTaskUp(index)}
+                className="px-4 py-2 border bg-green-500 text-white rounded-md"
+              >
+                Up
+              </button>
+              <button
+                onClick={() => moveTaskDown(index)}
+                className="px-4 py-2 border bg-blue-500 text-white rounded-md"
+              >
+                Down
               </button>
             </div>
           </li>
