@@ -14,8 +14,10 @@ function TodoList() {
   }
 
   function addTask() {
-    setTasks([...tasks, newTask]);
-    setNewTask("");
+    if (newTask.trim() !== "") {
+      setTasks((tasks) => [...tasks, newTask]);
+      setNewTask("");
+    }
   }
 
   function deleteTask(index) {
@@ -24,7 +26,11 @@ function TodoList() {
     setTasks(newTasks);
   }
 
-  function moveTaskUp(index) {}
+  function moveTaskUp(index) {
+    if (index > 0) {
+      const newTasks = [...tasks];
+    }
+  }
 
   function moveTaskDown(index) {}
 
